@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<!-- dsdsdsd -->
+<head>
+	<title>
+		Registration Form
+	</title>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  
+	<div class="wrapper">
+		<div class="nav">
+			<div class="logo">
+				Pratiksha
+			</div>
+			<div class="menu-links">
+				<ul>
+					<li>Sign Up</li>
+					<li>Sign In</li>
+					<li>About Us</li>
+					<li>Contact Us</li>
+				</ul>
+			</div>
+
+			<div class="search"><i class="fa fa-search"></i></div>
+			<div class="account">my account</div>
+			<div class="cart"><i class="fa fa-shopping-cart"></i></div>
+		</div>
+		<div class="banner">
+      <div class="info-head">
+        <h1 class="heading">
+            <span class="name" data-text1="Welcome" data-text2="Thank You !" data-text3="Registration"></span>	 
+        </h1>
+       
+      </div>
+			<div class="wrap">
+				<h2>Sign Up Here</h2>
+				<form action="http://localhost/1/signup11.php" method="post">
+					<input type="text" name="fullname" placeholder="Full Name"><br><br>
+					<input name="age" type="text" pattern="^\d{2}$" required placeholder=" Age"><br><br>
+					<input name="mobileno" type="text" pattern="^\d{4}\d{2}\d{4}$" required
+						placeholder=" Mobile No"><br><br>
+					<input type="email" name="email" placeholder=" Email"><br><br>
+					<input type="password" name="password" id="password" size=25 placeholder="Password" /><br><br>
+					<input type="password" name="password2" id="password2" size=25
+						placeholder="Confirm Password" /><br><br>
+					<input type="submit" value="submit" id="btnSubmit" onclick="return Validate()" />
+
+
+				</form>
+			</div>
+			<div class="boy">
+				<img src="./img/boy.png" alt="">
+			</div>
+		</div>
+<ul class="social">
+	<li> <a hreft="#"><img src="img/fb.png" class="sc-img"></a></li>
+	<li> <a hreft="#"><img src="img/in.png" class="sc-img"></a></li>
+	<li> <a hreft="#"><img src="img/tw.png" class="sc-img"></a></li>
+</ul>
+  </div>
+	<script type="text/javascript">
+		function Validate() {
+			var password = document.getElementById("password").value;
+			var Password2 = document.getElementById("password2").value;
+			if (password != Password2) {
+				alert("You first Passwords is not similar with 2nd password. Please enter same password in both");
+				return false;
+			}
+			return true;
+		}
+
+
+
+	</script>
+	 
+</body>
+</html>
